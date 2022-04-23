@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/epilog.css">
+    <script>
+        let texto = [
+            `
+            <h1>
+            25 de Setembro de 2010.
+        </h1>`,
+            `<h1>
+            Charlotte Sophia é dispensada do trabalho mais cedo por seu aniversário. Já no ponto de ônibus, ela vê um tlabet sobre um dos bancos e decide olhá-lo mais de perto.
+        </h1>`,
+            `<h1>
+            A tela acende.
+            <br>
+            <br>
+            <br> "Elijah?? " <br> "Faz muito tempo que você não me responde, onde você tá? " <br> "?????? " <br> "Elijah, tá tudo bem? " <br> <br> <br> O celular toca logo em seguida.
+            </h1>`,
+            `<h1>
+                Ela atendeu, e isso é o que nos traz aqui.
+                <br> 14 de Novembro de 2010.
+            </h1>`
+        ]
+
+        let i = 0
+
+        let periodic = setInterval(function() {
+            if (i >= texto.length - 1) {
+                document.getElementById('btn-continue').style.display = 'block';
+                clearInterval(periodic)
+            }
+            var msg = document.getElementById("main");
+            msg.innerHTML = texto[i]
+
+            i++;
+        }, 3000);
+    </script>
+</head>
+
+<body>
+    <div id="main">
+    </div>
+    <footer>
+        <div class="line typing-animation" id="btn-continue" onclick="window.location.href='/principal'" style="display: none;">
+            <h3>Continuar ►</h3>
+        </div>
+    </footer>
+</body>
+
+
+</html>
